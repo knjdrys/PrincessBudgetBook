@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#17181c">
+  <meta name="description" content="A private offline personal budget and cash planner.">
+  <title>Lablab's Budget Book • Made by Kenjie</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">₱</div>
+        <div>
+          <strong>Budget Book</strong>
+          <span>Private • Offline</span>
+        </div>
+      </div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="dashboard"><span>⌂</span> Overview</button>
+        <button class="nav-item" data-view="budget"><span>▦</span> Current Budget</button>
+        <button class="nav-item" data-view="transactions"><span>↕</span> Transactions</button>
+        <button class="nav-item" data-view="savings"><span>◒</span> Savings</button>
+        <button class="nav-item" data-view="history"><span>◷</span> History</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="privacy-note">
+          <span class="status-dot"></span>
+          <div><strong>Local only</strong><small>Your data stays on this device.</small></div>
+        </div>
+        <button class="nav-item" data-view="settings"><span>⚙</span> Settings</button>
+        <div class="creator-credit">Your lablab made this for you<br><strong>Kenjie Reyes</strong> · © 2026</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <button class="lablab-help" data-action="tutorial" aria-label="Open tutorial"><span>♡</span><strong>Para kay Lablab</strong></button>
+        <div class="mobile-brand"><div class="brand-mark">₱</div><strong>Budget Book</strong></div>
+        <div class="topbar-actions">
+          <div class="save-status" id="saveStatus">All changes saved</div>
+          <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">◐</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <div id="view-dashboard" class="view active"></div>
+        <div id="view-budget" class="view"></div>
+        <div id="view-transactions" class="view"></div>
+        <div id="view-savings" class="view"></div>
+        <div id="view-history" class="view"></div>
+        <div id="view-settings" class="view"></div>
+      </div>
+    </main>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Mobile navigation">
+    <button data-view="dashboard" class="active"><span>⌂</span><small>Overview</small></button>
+    <button data-view="budget"><span>▦</span><small>Budget</small></button>
+    <button data-view="transactions"><span>↕</span><small>Activity</small></button>
+    <button data-view="savings"><span>◒</span><small>Savings</small></button>
+    <button data-view="history"><span>◷</span><small>History</small></button>
+  </nav>
+
+  <div id="modalRoot"></div>
+  <div id="toastRoot" class="toast-root" aria-live="polite"></div>
+  <div id="printArea"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

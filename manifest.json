@@ -1,0 +1,17 @@
+{
+  "name": "Lablab's Budget Book • Made by Kenjie",
+  "short_name": "Lablab's Budget",
+  "description": "A private offline personal budget and cash planner.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f6f8",
+  "theme_color": "#3b3037",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
